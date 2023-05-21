@@ -19,5 +19,6 @@ export default defineConfig({
     brotli: {
       quality: 11,
     },
-  }),]
+  }),],
+  base: "/generar-qr/",
 })
