@@ -1,7 +1,6 @@
-# Vue 3 + Vite
+DESCRIPCION: Aplicacion hecho con Vue para que puedas crear, editar y compartir el codigo QR 
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+LINK: https://juanmaynard91.github.io
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+![pagina-secundaria](https://github.com/juanmaynard91/generar-qr/assets/74424452/04655980-42a1-40ce-b2b3-55fa12f60506)
+![pagina-principal](https://github.com/juanmaynard91/generar-qr/assets/74424452/7f9ac547-62a6-4a34-a322-7c2a929893be)
