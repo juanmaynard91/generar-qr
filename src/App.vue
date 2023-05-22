@@ -6,9 +6,6 @@
 </template>
 
 <script setup>
-import About from "./pages/About.vue";
-import Footer from "./components/Footer.vue";
-import Home from "./pages/Home.vue";
 import Navbar from "./components/Navbar.vue";
 </script>
 
