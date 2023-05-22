@@ -20,5 +20,5 @@ export default defineConfig({
       quality: 11,
     },
   }),],
-  base: "/",
+  base: "/generar-qr/",
 })
