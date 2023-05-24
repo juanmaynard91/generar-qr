@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item nav-icon">
-            <router-link to="/home">Inicio</router-link>
+            <router-link to="/">Inicio</router-link>
             <!--<a class="nav-link active" aria-current="page" href="#home">Inicio</a>-->
           </li>
           <li class="nav-item nav-icon">

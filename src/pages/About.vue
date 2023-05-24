@@ -40,9 +40,9 @@ const selectedFondo = ref("#ff0099");
 const addHttp = (event) => {
   const inputValue = event.target.value;
 
-  if (inputValue && !inputValue.startsWith("http://")) {
+  if (inputValue && !inputValue.startsWith("http://") && !inputValue.startsWith("https://")) {
     url.value = `http://${inputValue}`;
-  } else if (inputValue === "http://") {
+  } else if (inputValue === "http://" || inputValue === "https://") {
     //osea me deja borrarlo sin problemas
     url.value = "";
   }
