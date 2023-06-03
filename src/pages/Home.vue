@@ -1,6 +1,11 @@
 <template>
   <div class="container" id="home">
-    <h1>Todo lo que tienes que saber del <span>codigo QR</span></h1>
+
+    <h1 class="titulo-home">
+      Todo lo que tienes que saber del
+      <span class="typed-text">{{ typeValue }}</span>
+      <span class="cursor">&nbsp;</span>
+    </h1>
 
     <p>En esta sección encontrarás los conceptos básicos y los pasos necesarios para comenzar a disfrutar los beneficios de utilizar QR.</p>
 
@@ -64,8 +69,6 @@
           </div>
         </div>
       </div>
-
-      
     </main>
   </div>
   <Footer />
@@ -74,6 +77,53 @@
 <script setup>
 import Carrusel from "../components/Carrusel.vue";
 import Footer from "../components/Footer.vue";
+import { ref } from "vue";
+
+const typeValue = ref("");
+const typeStatus = ref(false);
+const typeArray = ref(["Codigo QR"]);
+const typingSpeed = ref(100);
+const erasingSpeed = ref(100);
+const newTextDelay = ref(2000);
+const typeArrayIndex = ref(0);
+const charIndex = ref(0);
+
+const typeText = () => {
+  if (charIndex.value < typeArray.value[typeArrayIndex.value].length) {
+    if (!typeStatus.value) typeStatus.value = true;
+
+    typeValue.value += typeArray.value[typeArrayIndex.value].charAt(
+      charIndex.value
+    );
+    charIndex.value += 1;
+
+    setTimeout(typeText, typingSpeed.value);
+  } else {
+    typeStatus.value = false;
+    setTimeout(eraseText, newTextDelay.value);
+  }
+};
+// erase : significa borrar
+const eraseText = () => {
+  if (charIndex.value > 0) {
+    if (!typeStatus.value) typeStatus.value = true;
+    typeValue.value = typeArray.value[typeArrayIndex.value].substring(
+      0,
+      charIndex.value - 1
+    );
+    charIndex.value -= 1;
+    setTimeout(eraseText, erasingSpeed.value);
+  } else {
+    typeStatus.value = false;
+    typeArrayIndex.value += 1;
+    if (typeArrayIndex.value >= typeArray.value.length)
+      typeArrayIndex.value = 0;
+
+    setTimeout(typeText, typingSpeed.value + 1000);
+  }
+};
+
+setTimeout(typeText, newTextDelay.value + 200);
 </script>
 
 <style>

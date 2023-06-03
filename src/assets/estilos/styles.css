@@ -57,6 +57,10 @@ h1 {
   margin: 30px;
 }
 
+.titulo-home {
+  text-align: start;
+}
+
 span {
   color: #ff0099;
 }
@@ -66,6 +70,7 @@ p {
   font-size: 1.3rem;
   margin: 2rem 0 3rem 0;
   text-align: center;
+  padding-right: 2rem;
 }
 
 .accordion {
@@ -165,17 +170,26 @@ h5 {
 }
 
 .btn {
-  border-bottom: 0.2rem solid #000;
   background: #ff0099;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 20px 30px -6px rgba(0, 0, 0, 0.5019607843);
   color: #fff;
+  cursor: pointer;
+  height: 3rem;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  width: 15rem;
 }
 
 .btn:hover {
   background: #ff0099;
+  box-shadow: none;
+  transform: translateY(3px);
 }
 
-.btn:focus {
-  outline: none;
+.btn:active {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 412px) {
@@ -273,22 +287,92 @@ h5 {
   align-items: center;
   bottom: 0;
   font-size: 25px;
-  height: 52px;
+  height: 4.3rem;
   position: sticky;
   width: 100%;
 }
 
-.footer__icon {
-  color: #fff;
-  padding: 0 1rem;
-  text-decoration: none;
+.wrapper {
+  display: inline-flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
 }
 
-.footer__icon:hover {
-  color: #ff0099;
+.wrapper .icon {
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  height: 2rem;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 2rem;
 }
-.footer__icon:hover a:hover {
-  margin-bottom: 5px;
+
+.wrapper .tooltip {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 14px;
+  opacity: 0;
+  padding: 5px 8px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  background: #fff;
+  bottom: -3px;
+  content: "";
+  height: 8px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 8px;
+}
+
+.wrapper .icon:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  top: -45px;
+  visibility: visible;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #ff0099;
+  color: #000;
+}
+
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+  background: #ff0099;
+  color: #000;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #ff0099;
+  color: #000;
 }
 
 @media screen and (max-width: 460px) {
@@ -349,7 +433,7 @@ img:hover {
   width: 30px;
 }
 .switch.active {
-  background: #ff8008;
+  background: #fdb813;
   color: #000;
 }
 .switch.active::after {
@@ -363,4 +447,4 @@ img:hover {
   height: 30px;
   line-height: 30px;
   width: 30px;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */

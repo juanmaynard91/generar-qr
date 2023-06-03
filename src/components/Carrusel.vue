@@ -1,5 +1,5 @@
 <template>
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="../assets/imagenes/codigo-qr-1.webp" loading="lazy" class="d-block w-100" alt="codigo-qr-uno" />

@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="about">
-    <h1> Crea tus propios <span class="color-span">codigos QR</span> e impulsa tu negocio o idea</h1>
+    <h1>Crea tu propio <span class="color-span">Codigo QR</span> e impulsa tu idea o negocio</h1>
 
     <input type="text" placeholder="Pon tu enlace aqui" class="form-control mt-3 mb-3 input-ancho" v-model.trim="url" ref="inputRef" @input="addHttp" />
 
@@ -18,9 +18,7 @@
       </div>
     </div>
 
-    <button class="btn" @click="shareQRCode">
-      <i class="bi bi-share-fill"></i> Compartir el codigo QR
-    </button>
+    <button class="btn" @click="shareQRCode"><i class="bi bi-share-fill"></i>Compartir el codigo QR</button>
   </div>
   <Footer />
 </template>
@@ -29,7 +27,7 @@
 import { ref, onMounted, watchEffect } from "vue";
 import Footer from "../components/Footer.vue";
 import QrcodeVue from "qrcode.vue"; //npm
-import Swal from 'sweetalert2'; //npm
+import Swal from "sweetalert2"; //npm
 
 const url = ref("");
 const qrSize = ref(290);
@@ -56,11 +54,11 @@ const shareQRCode = () => {
     });
   } else {
     Swal.fire({
-      title: 'Error!',
-      text: 'La funcionalidad de compartir no está soportada en este navegador.',
-      icon: 'error',
-      confirmButtonText: 'OK'
-    })
+      title: "Error!",
+      text: "La funcionalidad de compartir no está soportada en este navegador.",
+      icon: "error",
+      confirmButtonText: "OK",
+    });
   }
 };
 
