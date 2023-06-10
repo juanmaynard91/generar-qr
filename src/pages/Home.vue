@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="home">
+  <div class="container">
 
     <h1 class="titulo-home">
       Todo lo que tienes que saber del
@@ -71,12 +71,10 @@
       </div>
     </main>
   </div>
-  <Footer />
 </template>
 
 <script setup>
 import Carrusel from "../components/Carrusel.vue";
-import Footer from "../components/Footer.vue";
 import { ref } from "vue";
 
 const typeValue = ref("");
