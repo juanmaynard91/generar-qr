@@ -25,7 +25,7 @@ ul {
   margin-bottom: 0;
 }
 i {
-  color: black;
+  color: #fff;
   font-size: 1.3rem;
 }
 </style>
